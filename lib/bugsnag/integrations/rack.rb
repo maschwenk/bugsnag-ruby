@@ -11,7 +11,7 @@ module Bugsnag
       @app = app
 
       # Configure bugsnag rack defaults
-      Bugsnag.configure do |config|
+      Bugsnag.configure(false) do |config|
         # Try to set the release_stage automatically if it hasn't already been set
         config.release_stage ||= ENV["RACK_ENV"] if ENV["RACK_ENV"]
 

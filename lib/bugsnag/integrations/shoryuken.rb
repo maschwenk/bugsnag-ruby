@@ -10,7 +10,7 @@ module Bugsnag
     }
 
     def initialize
-      Bugsnag.configure do |config|
+      Bugsnag.configure(false) do |config|
         config.app_type ||= "shoryuken"
         config.default_delivery_method = :synchronous
       end
